@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Creepypasta</title>
+<link rel="icon" href="skull-74-64.png">
+<body>
+    <ul>
+        <li><a href="index.html"><img src="skull-74-64.png" height="43px"></a></li>
+        <li id="l1"><a href="content.html">Content</a></li>
+        <li id="l1"><a href="content.html">Top Ranked</a></li>
+        <li id="l1"><a href="content.html">Write</a></li>
+        <li id="l1"><a href="https://www.creepypasta.com/">About</a></li>
+    </ul>
+    <h1 id="head1">CREEPYPASTA</h1>
+    <hr>
+    <div id="div1">
+        <p>Creepypastas are horror-related legends that have been shared around the Internet. Creepypasta has since become a catch-all term for any horror content posted onto the Internet. These Internet entries are often brief, user-generated, paranormal stories intended to scare readers. They include gruesome tales of murder, suicide, and otherworldly occurrences. The subject of creepypasta varies widely and can include topics such as ghosts, murder, zombies, rituals to summon paranormal entities and haunted television shows and video games. Creepypastas range in length from a single paragraph to lengthy, multi-part series that can span multiple media types.
+        </p>
+        <p>In the mainstream media, creepypastas relating to the fictitious Slender Man character came to public attention after the 2014 "Slender Man stabbing", in which a 12-year-old girl was stabbed by two of her friends; the perpetrators claimed they "wanted to prove the Slender Man skeptics wrong." After the murder attempt, some creepypasta website administrators made statements reminding readers of the "line between fiction and reality".
+        </p>
+        <p>Other notable creepypasta stories include "Ben Drowned", "Jeff the Killer", "Ted the Caver" and "Sonic.exe".</p>
+    </div>
+    <div id="div2">
+        <p id="prompt"></p>
+        <p id="time"></p>
+    </div>
+
+    <button class="bt" onclick="prompt()">Prompt</button>
+    <button class="bt" onclick="changebg()">Background</button>
+    <button class="bt" onclick="setTimeout(changehead, 5000);">Change heading</button>
+    <button class="bt" onclick="showtime()">Current Time</button>
+
+    <br><br><br><hr>
+    <footer>Thank you for visiting!</footer>
+    <br>
+
+    <script>
+        document.body.style.background = 'black';
+        document.getElementById('head1').innerHTML = 'CREEPYPASTA';
+        document.getElementById('time').innerHTML = '';
+        document.getElementById('prompt').innerHTML = '';
+
+        function changebg() {
+            var x = document.body.style.background;
+            var b2 = 'rgb(0, 15, 45)';
+            var b3 = 'rgb(0, 35, 35)';
+            if (x == 'black') changeColor(b2);
+            else if (x == b2) changeColor(b3);
+            else changeColor('black');
+        }
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function changehead() {
+            var x = document.getElementById('head1').innerHTML;
+            if (x == 'CREEPYPASTA') document.getElementById('head1').innerHTML = "Internet Horror";
+            else document.getElementById('head1').innerHTML = 'CREEPYPASTA';
+        }
+        function showtime() {
+            x = document.getElementById('time').innerHTML;
+            if (x=='') document.getElementById('time').innerHTML = Date();
+            else document.getElementById('time').innerHTML = '';
+        }
+        function prompt() {
+            x = document.getElementById('prompt').innerHTML;
+            if (x=='') document.getElementById('prompt').innerHTML = "Welcome!";
+            else document.getElementById('prompt').innerHTML = '';
+        }
+    </script>
+
+<style>
+    html{
+        height: 100%;
+    }
+    #head1 {
+        margin: 10px;
+        padding: 10px;
+        color: #c81414;
+        font-size: 6ch;
+
+    }
+    body {
+        color: white;
+        text-align: center;
+        min-height: 100%;
+        background-color: black;
+    }
+    #div1 {
+        border: 5px groove #66ffb3;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: left;
+    }
+    #div2 {
+        font-size: 22px;
+    }
+    .bt {
+        background-color: rgb(20, 20, 25);
+        border: 3px groove #66ffb3;
+        color: white;
+        padding: 7px 15px;
+        text-align: center;
+        font-size: 16px;
+        margin: 3px 10px;
+        border-radius: 5px;
+    }
+    ul {
+        text-align: left;
+        margin: 20px;
+        height:  25px;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    li {
+        float: left;
+        list-style: none;
+        margin-right: 20px;
+    }
+    li:hover {
+        background-color: #101010;
+    }
+    #l1 {
+        border: 5px #d02e11;
+        background-color: #c81414;
+        border-radius: 40px;
+        padding: 10px;
+    }
+    #l1:hover {
+        background-color: #f14737;
+    }
+    footer {
+        font-size: 24px;
+        color: #66ffb3;
+    }
+    a:link {
+        color: white;
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+    a:active {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</body>
+</html>
