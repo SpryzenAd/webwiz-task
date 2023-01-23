@@ -24,7 +24,7 @@
         <p id="time"></p>
     </div>
 
-    <button class="bt" onclick="prompt()">Prompt</button>
+    <button class="bt" onclick="prompt2()">Prompt</button>
     <button class="bt" onclick="changebg()">Background</button>
     <button class="bt" onclick="setTimeout(changehead, 5000);">Change heading</button>
     <button class="bt" onclick="showtime()">Current Time</button>
@@ -60,11 +60,16 @@
             if (x=='') document.getElementById('time').innerHTML = Date();
             else document.getElementById('time').innerHTML = '';
         }
-        function prompt() {
+        function prompt1() {
             x = document.getElementById('prompt').innerHTML;
             if (x=='') document.getElementById('prompt').innerHTML = "Welcome!";
             else document.getElementById('prompt').innerHTML = '';
         }
+        function propmt2() {
+            var name = prompt("Please enter your name", "");
+            if (name != null) {
+            document.getElementById("prompt").innerHTML = "Welcome " + name;
+        }        
     </script>
 
 <style>
